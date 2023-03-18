@@ -14,36 +14,36 @@ public class HomePage {
     public HomePage() {
     }
     // Локаторы на главной странице
-    private By AcceptCookieButton = By.id("rcc-confirm-button");  // кнопка согласия использования куки
-    private By ImgScooter = By.xpath("//img[@alt='Scooter blueprint']"); // элемент самокат
-    private By HeadingQuest = By.xpath("//div[text() = 'Вопросы о важном']"); // элемент заголовка Вопросы о важном
-    private By OrderButtonTop = By.className("Button_Button__ra12g"); // кнопка заказать вверху сайта
-    private By OrderButtonDown = By.xpath("//button[contains(@class, 'Button_Middle')]"); // кнопка заказать внизу сайта
+    private By acceptCookieButton = By.id("rcc-confirm-button");  // кнопка согласия использования куки
+    private By imgScooter = By.xpath("//img[@alt='Scooter blueprint']"); // элемент самокат
+    private By headingQuest = By.xpath("//div[text() = 'Вопросы о важном']"); // элемент заголовка Вопросы о важном
+    private By orderButtonTop = By.className("Button_Button__ra12g"); // кнопка заказать вверху сайта
+    private By orderButtonDown = By.xpath("//button[contains(@class, 'Button_Middle')]"); // кнопка заказать внизу сайта
     // Локаторы из списка вопросов и ответов
-    private By ListQuestions = By.xpath("//*[@class='accordion__button']"); // элемент вопросов
-    private By ListAnswers = By.xpath("//div[@data-accordion-component='AccordionItemPanel']"); // элемент ответов
+    private By listQuestions = By.xpath("//*[@class='accordion__button']"); // элемент вопросов
+    private By listAnswers = By.xpath("//div[@data-accordion-component='AccordionItemPanel']"); // элемент ответов
     // Преобразование локаторов в вебэлементы
     public By getImage() {
-        return ImgScooter;
+        return imgScooter;
     }
     public WebElement getCookie() {
-        return driver.findElement(AcceptCookieButton);
+        return driver.findElement(acceptCookieButton);
     }
     public WebElement getModQuest() {
-        return driver.findElement(HeadingQuest);
+        return driver.findElement(headingQuest);
     }
     public By getOrderedTop() {
-        return OrderButtonTop;
+        return orderButtonTop;
     }
     public By getOrderedDown() {
-        return OrderButtonDown;
+        return orderButtonDown;
     }
     // Коллекция из элементов вопросов
     public List<WebElement> getListQuestions() {
-        return driver.findElements(ListQuestions);
+        return driver.findElements(listQuestions);
     }
     // Коллекция из элементов ответов
     public List<WebElement> getListAnswer() {
-        return driver.findElements(ListAnswers);
+        return driver.findElements(listAnswers);
     }
 }

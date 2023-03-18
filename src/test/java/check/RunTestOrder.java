@@ -76,7 +76,7 @@ public class RunTestOrder {
                 .click((objOrderPage.getPlaceAnOrderYes()));
 
         assertTrue("Отсутствует сообщение об успешном завершении заказа",
-                objService.isElementPresent(objOrderPage.OrderPlacedHeader));
+                objService.isElementPresent(objOrderPage.orderPlacedHeader));
 
     }
 
